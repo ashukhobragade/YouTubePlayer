@@ -2,25 +2,9 @@
 
 Embed and control YouTube videos in your iOS applications! Neato, right? Let's see how it works.
 
-**0.7.0 Update:** [`WKWebView` breaking changes](#breaking-changes)
+**1.0.0 **
 
 ## Installation
-
-### Carthage
-
-Add this to your Cartfile:
-
-```
-github "gilesvangruisen/Swift-YouTube-Player"
-```
-
-…and then run `carthage update`
-
-Don't forget to:
-* add `YouTubePlayer.framework` to the `Link binary with libraries` build phase
-* add `YouTubePlayer.framework` as an input file to the `carthage copy-frameworks` run script phase (only necesasry if you're building for iOS)
-
-See [Carthage](http://github.com/carthage/carthage) for more information about using Carthage as a dependency manager.
 
 ### Cocoapods
 
@@ -90,13 +74,4 @@ In the meantime, you can also the `YouTubePlayerDelegate` method `playerReady(vi
 * `func playerQualityChanged(videoPlayer: YouTubePlayerView, playbackQuality: YouTubePlaybackQuality)`
 
 *Side note:* All these delegate methods are optional which means that you can implement none, all, or some of them in your delegate class.
-
-## Breaking Changes 
-
-**0.7.0**
-Transitioning from `UIWebView` (deprecated) to `WKWebView` required changing
-player calls which return values to be asynchronous. If you upgrade to 0.7.0,
-you will need to replace any call to either `getCurrentTime()` and
-`getDuration()` with its asynchronous equivalent, [documented
-above](#controlling-youtubeplayerview).
 
