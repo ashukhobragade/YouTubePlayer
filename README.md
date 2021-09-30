@@ -75,12 +75,3 @@ In the meantime, you can also the `YouTubePlayerDelegate` method `playerReady(vi
 
 *Side note:* All these delegate methods are optional which means that you can implement none, all, or some of them in your delegate class.
 
-## Breaking Changes 
-
-**0.7.0**
-Transitioning from `UIWebView` (deprecated) to `WKWebView` required changing
-player calls which return values to be asynchronous. If you upgrade to 0.7.0,
-you will need to replace any call to either `getCurrentTime()` and
-`getDuration()` with its asynchronous equivalent, [documented
-above](#controlling-youtubeplayerview).
-
