@@ -1,6 +1,6 @@
 Pod::Spec.new do |s|
   s.name         = "YTPlayer"
-  s.version      = "1.0.2"
+  s.version      = "1.0.3"
   s.summary      = "Swift library for embedding and controlling YouTube videos in your iOS applications"
   s.homepage     = "https://github.com/ashukhobragade/YouTubePlayer"
   s.license      = { :type => "MIT", :file => "LICENSE" }
@@ -12,4 +12,8 @@ Pod::Spec.new do |s|
   s.source_files  = "YouTubePlayer/**/*.{swift,h,m}"
   s.exclude_files = "Classes/Exclude"
   s.resources = 'YouTubePlayer/**/*.html'
+  s.pod_target_xcconfig = {
+    'EXCLUDED_ARCHS[sdk=iphonesimulator*]' => 'arm64'
+  }
+  s.user_target_xcconfig = { 'EXCLUDED_ARCHS[sdk=iphonesimulator*]' => 'arm64' }
 end
